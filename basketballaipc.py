@@ -9,12 +9,5 @@ pc = Pinecone(api_key=api_key)
 
 index_name = "quickstart"
 
-pc.create_index(
-    name=index_name,
-    dimension=8, # Replace with your model dimensions
-    metric="euclidean", # Replace with your model metric
-    spec=ServerlessSpec(
-        cloud="aws",
-        region="us-east-1"
-    ) 
-)
+index = pc.Index("quickstart")
+
